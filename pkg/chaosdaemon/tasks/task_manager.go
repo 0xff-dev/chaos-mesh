@@ -102,7 +102,7 @@ func (cm TaskManager) CopyTaskConfigManager() TaskConfigManager {
 func (cm TaskManager) CopyTaskMap() map[IsID]Injectable {
 	pm := make(map[IsID]Injectable)
 	for pid, chaosOnProcess := range cm.taskMap {
-		cm.taskMap[pid] = chaosOnProcess
+		pm[pid] = chaosOnProcess
 	}
 	return pm
 }
